@@ -1,0 +1,35 @@
+<plugin name='neo4j' version='1.0.0.RC1' grailsVersion='1.2 &gt; *'>
+  <author>Stefan Armbruster</author>
+  <authorEmail>stefan@armbruster-it.de</authorEmail>
+  <title>Neo4j GORM</title>
+  <description>A plugin that integrates the Neo4j graph database into Grails, providing a GORM API onto it</description>
+  <documentation>http://grails.org/plugin/neo4j</documentation>
+  <type>Neo4jGrailsPlugin</type>
+  <resources>
+    <resource>Neo4jBootStrap</resource>
+    <resource>org.grails.datastore.gorm.neo4j.Neo4jController</resource>
+  </resources>
+  <repositories>
+    <repository name='grailsCentral' url='http://grails.org/plugins' />
+    <repository name='http://repo.grails.org/grails/core' url='http://repo.grails.org/grails/core/' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+    <repository name='http://repo.grails.org/grails/repo' url='http://repo.grails.org/grails/repo/' />
+  </repositories>
+  <dependencies>
+    <test>
+      <dependency group='org.grails' name='grails-datastore-simple' version='1.1.6.RELEASE' />
+      <dependency group='org.grails' name='grails-datastore-gorm-test' version='1.1.6.RELEASE' />
+    </test>
+    <compile>
+      <dependency group='org.grails' name='grails-datastore-gorm' version='1.1.6.RELEASE' />
+      <dependency group='org.grails' name='grails-datastore-gorm-neo4j' version='1.0.0.RC1' />
+      <dependency group='org.neo4j' name='neo4j-community' version='1.8.2' />
+      <dependency group='org.grails' name='grails-datastore-gorm-plugin-support' version='1.1.6.RELEASE' />
+      <dependency group='org.grails' name='grails-datastore-web' version='1.1.6.RELEASE' />
+      <dependency group='org.grails' name='grails-datastore-core' version='1.1.6.RELEASE' />
+    </compile>
+  </dependencies>
+  <plugins />
+  <runtimePluginRequirements />
+  <behavior />
+</plugin>
